@@ -1,4 +1,4 @@
-# App
+# Some notes
 
 ## Summary
 
@@ -14,4 +14,4 @@ For people with hearing impairment, the app can choose from multiple inputs and 
 
 ### Main Goals
 
-- [] Will be accessible and meet Web Content Accessibility Guidelines (WCAG) 2.1 requirements
+- [ ] Will be accessible and meet Web Content Accessibility Guidelines (WCAG) 2.1 requirements.
