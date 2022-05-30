@@ -2,8 +2,11 @@ import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import * as Font from "expo-font";
 import * as SplashScreen from 'expo-splash-screen';
 import { useCallback, useEffect, useState } from "react";
-import { StyleSheet, View } from "react-native";
-import { Button, CheckBox } from "react-native-elements";
+import { StyleSheet, Image, View } from "react-native";
+import { ListInput } from "./components/ListInput";
+import { ListOutput } from "./components/ListOutput";
+import { ContainerDivider } from "./components/ContainerDivider";
+import { SliderVolume } from "./components/SliderVolume";
 
 export default function App() {
   const [appIsReady, setAppIsReady] = useState(false);
@@ -42,16 +45,21 @@ export default function App() {
 
   return (
     <View style={styles.container} onLayout={onLayoutRootView}>
-      <Button
-        raised
-        icon={{ name: "cached", color: "white" }}
-        title="RAISED WITH ICON"
-      />
-      <CheckBox
-        title="Click Here"
-        checked={checked}
-        onPress={() => setChecked((checked) => !checked)}
-      />
+      <View style={styles.containerList}>
+        <ListInput />
+      </ View>
+
+      <ContainerDivider />
+
+      <View style={styles.containerSlider}>
+          <SliderVolume />
+      </View>
+
+      <ContainerDivider />
+
+      <View style={styles.containerList}> 
+        <ListOutput /> 
+      </ View>
     </View>
   );
 }
@@ -61,6 +69,16 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center",
+    padding: "5%",
   },
+  containerList: {
+    flex: 1,
+    backgroundColor: "#fff",
+  },
+  containerSlider: {
+    flex: 1, 
+    width: "80%",
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
 });
