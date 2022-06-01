@@ -5,7 +5,6 @@ const CardOutput = (props) => {
     return (
         <Card containerStyle={{}} wrapperStyle={{}}>
           <Card.Title>{props.title}</Card.Title>
-          <Card.Divider />
           <View
             style={{
               position: "relative",
@@ -13,9 +12,9 @@ const CardOutput = (props) => {
             }}
           >
             <Image
-              style={{ width: "100%", height: 100 }}
+              style={{ width: "100%", height: 30 }}
               resizeMode="contain"
-              source={require('../images/icon_output_1.jpg')}
+              source={require('../assets/images/icon_output_1.jpg')}
             />
           </View>
         </Card>

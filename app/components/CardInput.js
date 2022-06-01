@@ -5,16 +5,15 @@ const CardInput = (props) => {
     return (
         <Card containerStyle={{}} wrapperStyle={{}}>
           <Card.Title>{props.title}</Card.Title>
-          <Card.Divider />
           <View
             style={{
               position: "relative",
             }}
           >
             <Image
-              style={{ width: "100%", height: 100 }}
+              style={{ width: "100%", height: 30 }}
               resizeMode="contain"
-              source={require('../images/icon_input_1.jpg')}
+              source={require('../assets/images/icon_input_1.jpg')}
             />
           </View>
         </Card>
@@ -22,10 +21,7 @@ const CardInput = (props) => {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-  },
+
 });
 
 export { CardInput };
