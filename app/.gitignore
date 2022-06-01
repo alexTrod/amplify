@@ -1,5 +1,6 @@
 # package management
 package-lock.json
+yarn.lock
 
 # OSX
 #
